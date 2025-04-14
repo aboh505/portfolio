@@ -1,0 +1,193 @@
+.footer {
+  background: var(--background-light);
+  border-top: 1px solid var(--border-light);
+  padding: 4rem 0 2rem;
+  margin-top: 6rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Section principale */
+.mainSection {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1.5fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+/* Brand section */
+.brand h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  background: var(--gradient-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.brand p {
+  color: var(--text-muted-light);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+/* Navigation et Services */
+.navigation h3,
+.services h3,
+.contact h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1.2rem;
+  color: var(--text-light);
+}
+
+.navigation ul,
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+
+.navigation li,
+.services li {
+  margin-bottom: 0.8rem;
+}
+
+.navigation a,
+.services li {
+  color: var(--text-muted-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navigation a:hover {
+  color: var(--primary-color);
+}
+
+/* Contact section */
+.contact p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-muted-light);
+  margin-bottom: 1.2rem;
+}
+
+.contact a {
+  color: var(--text-muted-light);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact a:hover {
+  color: var(--primary-color);
+}
+
+/* Social icons */
+.social {
+  display: flex;
+  gap: 1rem;
+}
+
+.social a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--background-light);
+  color: var(--text-light);
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+.social a:hover {
+  background: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+/* Copyright section */
+.copyright {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted-light);
+}
+
+.heart {
+  color: #ff0000;
+  animation: heartbeat 1.5s ease infinite;
+  display: inline-block;
+  margin: 0 0.3rem;
+  transform-origin: center;
+}
+
+@keyframes heartbeat {
+  0% { transform: scale(1); }
+  14% { transform: scale(1.3); }
+  28% { transform: scale(1); }
+  42% { transform: scale(1.3); }
+  70% { transform: scale(1); }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .mainSection {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 3rem 0 1.5rem;
+  }
+
+  .mainSection {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .brand h2 {
+    text-align: center;
+  }
+
+  .brand p {
+    text-align: center;
+  }
+
+  .navigation,
+  .services,
+  .contact {
+    text-align: center;
+  }
+
+  .social {
+    justify-content: center;
+  }
+}
+
+/* Dark mode */
+:global(.dark) .footer {
+  background: var(--background-dark);
+  border-color: var(--border-dark);
+}
+
+:global(.dark) .social a {
+  background: var(--background-dark);
+  border-color: var(--border-dark);
+}
+
+:global(.dark) .social a:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}

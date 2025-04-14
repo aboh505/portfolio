@@ -1,0 +1,107 @@
+/* Mode clair (par défaut) */
+:root {
+  --background-light: #ffffff;
+  --text-light: #333333;
+  --text-muted-light: #666666;
+  --border-light: #e5e5e5;
+  --primary-color: #8B5CF6; /* Violet */
+  --secondary-color: #EC4899; /* Rose */
+  --gradient-text: linear-gradient(45deg, #8B5CF6, #EC4899);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --hero-bg: #F3F4F6;
+  --background: var(--background-light);
+  --foreground: var(--text-light);
+  --text-secondary: var(--text-muted-light);
+  --border: var(--border-light);
+  --card-bg: var(--background-light);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --primary: var(--primary-color);
+  --primary-hover: #6c5ce7;
+}
+
+/* Mode sombre */
+:root[class~="dark"] {
+  --background-light: #1A1A1A;
+  --text-light: #ffffff;
+  --text-muted-light: #a0a0a0;
+  --border-light: #333333;
+  --primary-color: #A78BFA; /* Violet plus clair */
+  --secondary-color: #F472B6; /* Rose plus clair */
+  --gradient-text: linear-gradient(45deg, #A78BFA, #F472B6);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.3);
+  --hero-bg: #111111;
+  --background: var(--background-light);
+  --foreground: var(--text-light);
+  --text-secondary: var(--text-muted-light);
+  --border: var(--border-light);
+  --card-bg: var(--background-light);
+  --hover-bg: rgba(255, 255, 255, 0.1);
+  --primary: var(--primary-color);
+  --primary-hover: #8B5CF6;
+}
+
+/* Transitions douces */
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Styles globaux pour le mode sombre */
+.dark body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+/* Ajustements pour les cartes et conteneurs */
+.dark [class*="Card"],
+.dark [class*="container"] {
+  background-color: var(--card-bg);
+  border-color: var(--border);
+}
+
+/* Ajustements pour les liens et boutons */
+.dark a:not([class]),
+.dark button:not([class]) {
+  color: var(--primary);
+}
+
+.dark a:not([class]):hover,
+.dark button:not([class]):hover {
+  color: var(--primary-hover);
+}
+
+/* Styles spécifiques au mode sombre */
+.dark .hero {
+  background: var(--hero-bg);
+  height: 85vh; /* Réduire légèrement la hauteur en mode sombre */
+}
+
+.dark .content {
+  color: var(--text-light);
+}
+
+.dark .title {
+  color: var(--text-light);
+}
+
+.dark .description {
+  color: var(--text-muted-light);
+}
+
+.dark .card {
+  background: var(--background-light);
+  border: 1px solid var(--border-light);
+}
+
+.dark .card:hover {
+  border-color: var(--primary-color);
+}
+
+.dark .footer {
+  background: var(--background-light);
+  border-top: 1px solid var(--border-light);
+  color: var(--text-light);
+}
