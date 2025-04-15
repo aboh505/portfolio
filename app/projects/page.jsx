@@ -41,7 +41,7 @@ export default function Projects() {
         'Système de galerie'
       ],
       github: 'https://github.com/aboh505/bibliaOnline.git',
-      demo: 'https://biblia-online-zeta.vercel.app/'
+      demo: 'https://bibleverse-nine.vercel.app/'
     }
   ];
 
